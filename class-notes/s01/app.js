@@ -18,12 +18,24 @@ var h; // any atar otomatik olarak
 // nums.push(false)
 // console.log(nums);
 // nums.forEach((item)=>item.toLowerCase())
-var usernames = ["Kemal", "Mustafa"];
-usernames.push("ayşe");
-// usernames.push(5) // Argument of type 'number' is not assignable to parameter of type 'string'. //error
-var surnames = [];
-surnames.push("Harold");
-surnames.push("25");
-// type declaration 2. Yol
-var nums2 = [5, 6];
-console.log(surnames);
+// let usernames : string[] = ["Kemal", "Mustafa"]
+// usernames.push("ayşe")
+// // usernames.push(5) // Argument of type 'number' is not assignable to parameter of type 'string'. //error
+// let surnames : string[] = [];
+// surnames.push("Harold")
+// surnames.push("25")
+// // type declaration 2. Yol
+// let nums2 : Array<number> = [5, 6]
+// console.log(surnames);
+//* Tuples
+var myTuple = [5, "Merhaba", false];
+console.log(myTuple);
+var myTuple2;
+myTuple2 = [6, "World"]; // Type '[number, string]' is not assignable to type '[number, string, boolean]'. Source has 2 element(s) but target requires 3.
+console.log(myTuple2);
+// Tuples of Array
+var myTuple3;
+myTuple3 = [[5, "5"], [6, "6", 5]]; //Type '[number, string, number]' is not assignable to type '[number, string]'.Source has 3 element(s) but target allows only 2.
+myTuple3.push([7, "7"]);
+myTuple3.push(false); //Argument of type 'boolean' is not assignable to parameter of type '[number, string]'.
+console.log(myTuple3);
