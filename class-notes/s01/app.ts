@@ -94,15 +94,38 @@ console.log("Cohort DE09");
 // Sizes["Medium"]
 // Sizes[101] // XXLarge // Çok kullanışı bir yöntem değil, çok nadir kullanılır
 
-let hh : any = 1
-hh = "Hello"
+// let hh : any = 1
+// hh = "Hello"
 
-let k : boolean = hh
+// let k : boolean = hh
 
-//? unknown
+// //? unknown
 
-let j : unknown = 5
-j = "5"
+// let j : unknown = 5
+// j = "5"
 
-let m : string = j // unknown & any
-let n : string = j as string // type assertions (mümkün mertebe kullanılmaması gereken bir yöntem)
+// let m : string = j // unknown & any
+// let n : string = j as string // type assertions (mümkün mertebe kullanılmaması gereken bir yöntem)
+
+//? void type
+
+// function warnUser():void {
+//     console.log("Warning");    
+// }
+
+// function warnUser2():void {
+//     console.log("Warning");  
+//     return "warn"  
+// } //Error
+
+// let myfunc = warnUser()
+// console.log(myfunc);
+
+
+// //? never type
+
+// function throwError() : never{
+//     throw new Error("error")
+// }
+
+
