@@ -59,4 +59,39 @@ let h; // any atar otomatik olarak
 // myTuple3.push(false) //Argument of type 'boolean' is not assignable to parameter of type '[number, string]'.
 // console.log(myTuple3);
 
+//? Enum 
+
+const enum Role {
+    User, //User = 0
+    Admin, // Admin = 1
+    DbAdmin = Admin * 3, // DbAdmin = 3
+    Tester // Tester = 4
+}
+
+let currentUser : Role = Role.DbAdmin
+currentUser = Role.Tester
+console.log(currentUser);
+
+enum StatusCodes {
+    NotFound = 404,
+    Created = 201,
+    Accepted = 202, 
+    BadRequest = 500,
+    NoContent = 204,
+    Success = 200
+}
+
+const response : StatusCodes = StatusCodes.Success
+
+enum Sizes {
+    Small = "S",
+    Medium = "M",
+    Large = "L",
+    XLarge = 100,
+    XXLarge
+}
+Sizes.Medium
+Sizes["Medium"]
+Sizes[101] // XXLarge // Çok kullanışı bir yöntem değil, çok nadir kullanılır
+
 
