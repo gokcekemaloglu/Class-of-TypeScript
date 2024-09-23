@@ -155,12 +155,12 @@ console.log("Cohort DE09");
 
 //? function
 
-function sayHello(name:string):string {
-    return `Hello ${name}`
-}
-console.log(sayHello("Gokce"));
-console.log(sayHello(5)); //ts error
-console.log(sayHello("Gokce","5"));// ts error
+// function sayHello(name:string):string {
+//     return `Hello ${name}`
+// }
+// console.log(sayHello("Gokce"));
+// console.log(sayHello(5)); //ts error
+// console.log(sayHello("Gokce","5"));// ts error
 
 //* functionoverloading
 
