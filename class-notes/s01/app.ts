@@ -1,15 +1,15 @@
 console.log("Cohort DE09");
 
-let b = 5
-let c = 2
+// let b = 5
+// let c = 2
 
-// b = "5"  // Type 'string' is not assignable to type 'number'.
+// // b = "5"  // Type 'string' is not assignable to type 'number'.
 
-let e : string = "Hello"
-let f = "World!"
+// let e : string = "Hello"
+// let f = "World!"
 
-let g : boolean;
-let h; // any atar otomatik olarak
+// let g : boolean;
+// let h; // any atar otomatik olarak
 
 // let x, y,z : string; // tek satırda birden fazla değişkene "type" belirtemiyoruz, baştakileri "any" olarak kabul ediyor sonrakine asıl tip ataması yapıyor.
 // x = "Hello";
@@ -94,6 +94,15 @@ let h; // any atar otomatik olarak
 // Sizes["Medium"]
 // Sizes[101] // XXLarge // Çok kullanışı bir yöntem değil, çok nadir kullanılır
 
+let hh : any = 1
+hh = "Hello"
 
+let k : boolean = hh
 
+//? unknown
 
+let j : unknown = 5
+j = "5"
+
+let m : string = j // unknown & any
+let n : string = j as string // type assertions (mümkün mertebe kullanılmaması gereken bir yöntem)
