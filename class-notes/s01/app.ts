@@ -128,4 +128,53 @@ console.log("Cohort DE09");
 //     throw new Error("error")
 // }
 
+//? Union Type
 
+// let id : string | number = "a"
+// id = 5
+// id = false // Ts Error: Type 'boolean' is not assignable to type 'string | number'.
+
+//? Type Alias
+
+// type Id = number | string
+
+// let myId : Id = 5
+// myId = "5"
+// let model : Id = "1996"
+// model = 1996
+
+//? String Literals
+
+// type Car = "BMW" | "Mercedes" | "Audi"
+
+// let car1 : Car = "BMW"
+// car1 = "Honda" //Type '"Honda"' is not assignable to type 'Car'.
+// car1 = 45 
+// car1 = "Mercedes"
+// car1 = "Audi"
+
+//? function
+
+function sayHello(name:string):string {
+    return `Hello ${name}`
+}
+console.log(sayHello("Gokce"));
+console.log(sayHello(5)); //ts error
+console.log(sayHello("Gokce","5"));// ts error
+
+//* functionoverloading
+
+function add(a:string, b:string):string
+function add(a:number, b:number):number
+function add(a:string, b:number):string
+function add(a:any, b:any){ //* overloading için en son asıl fonk.u yazarken parametrelere any vermemiz gerekiyor. paramertrelere any versek de çalışırken overloading olan fonksiyonlardaki parametrelerin typ'ına göre kabul ediyor
+    return a + b
+}
+
+console.log(add(3,5));
+console.log(add("3","5"));
+console.log(add("3",5));
+console.log(add(3,"5")); // error
+
+
+ 

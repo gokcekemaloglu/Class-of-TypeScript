@@ -77,16 +77,46 @@ console.log("Cohort DE09");
 // let m : string = j // unknown & any
 // let n : string = j as string // type assertions (mümkün mertebe kullanılmaması gereken bir yöntem)
 //? void type
-function warnUser() {
-    console.log("Warning");
+// function warnUser():void {
+//     console.log("Warning");    
+// }
+// function warnUser2():void {
+//     console.log("Warning");  
+//     return "warn"  
+// } //Error
+// let myfunc = warnUser()
+// console.log(myfunc);
+// //? never type
+// function throwError() : never{
+//     throw new Error("error")
+// }
+//? Union Type
+// let id : string | number = "a"
+// id = 5
+// id = false // Ts Error: Type 'boolean' is not assignable to type 'string | number'.
+//? Type Alias
+// type Id = number | string
+// let myId : Id = 5
+// myId = "5"
+// let model : Id = "1996"
+// model = 1996
+//? String Literals
+// type Car = "BMW" | "Mercedes" | "Audi"
+// let car1 : Car = "BMW"
+// car1 = "Honda" //Type '"Honda"' is not assignable to type 'Car'.
+// car1 = 45 
+// car1 = "Mercedes"
+// car1 = "Audi"
+//? function
+function sayHello(name) {
+    return "Hello ".concat(name);
 }
-function warnUser2() {
-    console.log("Warning");
-    return "warn";
-} //Error
-var myfunc = warnUser();
-console.log(myfunc);
-// never type
-function throwError() {
-    throw new Error("error");
+console.log(sayHello("Gokce"));
+console.log(sayHello(5)); //ts error
+console.log(sayHello("Gokce", "5")); // ts error
+function add(a, b) {
+    return a + b;
 }
+console.log(add(3, 5));
+console.log(add("3", "5"));
+console.log(add("3", 5));
