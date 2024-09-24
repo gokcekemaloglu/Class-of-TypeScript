@@ -51,6 +51,7 @@ const adminUser = {
     getName: () => console.log("admin")
 };
 console.log(adminUser);
+//? object arrays
 // const users = [] // any[]
 // users.push(5)
 // users.push({username:"s"})
@@ -94,4 +95,18 @@ const testGenerics3 = {
     content: "asddsad",
     createdAt: new Date(),
     extra: [{ id: 5, title: "qwer" }]
+};
+const testGenerics4 = {
+    id: 1,
+    title: "asda",
+    content: "asddsad",
+    createdAt: new Date(),
+    extra: [{ id: 5, title: "qwer" }]
+};
+const testGenerics5 = {
+    id: 1,
+    title: "asda",
+    content: "asddsad",
+    createdAt: new Date(),
+    extra: [{ id: 5, username: "admin" }]
 };

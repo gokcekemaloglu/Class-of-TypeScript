@@ -76,23 +76,23 @@ const user1:IUser = {
   }
 }
 
-interface IAdminUser {
-  username: string,
-  firstName: string,
-  age: number,
-  getName: () => void,
-  isAdmin: boolean,
-  password: string
-}
+// interface IAdminUser {
+//   username: string,
+//   firstName: string,
+//   age: number,
+//   getName: () => void,
+//   isAdmin: boolean,
+//   password: string
+// }
 
-interface IManagerUser {
-  username: string,
-  firstName: string,
-  age: number,
-  getName: () => void,
-  isManager: boolean,
-  department: string
-}
+// interface IManagerUser {
+//   username: string,
+//   firstName: string,
+//   age: number,
+//   getName: () => void,
+//   isManager: boolean,
+//   department: string
+// }
 
 interface IAdminUser2 extends IUser {
   isAdmin: boolean,
@@ -109,6 +109,8 @@ const adminUser : IAdminUser2 = {
 }
 
 console.log(adminUser);
+
+//? object arrays
 
 // const users = [] // any[]
 // users.push(5)
@@ -143,9 +145,12 @@ const myArr2 = [...myArr, ...users] // myArr | IUser iki tipi de birleştirmiş 
 
 //! Generics
 
+//* generic kullanmadan
 interface Auth {
-
+  id: number,
+  username:string
 }
+
 
 interface Category {
   id: number,
@@ -192,4 +197,20 @@ const testGenerics3 : PostBetter<{id:number, title:string}> = {
   content: "asddsad",
   createdAt: new Date(),
   extra: [{id:5, title: "qwer"}]
+}
+
+const testGenerics4 : PostBetter<Category> = {
+  id: 1,
+  title: "asda",
+  content: "asddsad",
+  createdAt: new Date(),
+  extra: [{id:5, title: "qwer"}]
+}
+
+const testGenerics5 : PostBetter<Auth> = {
+  id: 1,
+  title: "asda",
+  content: "asddsad",
+  createdAt: new Date(),
+  extra: [{id:5, username: "admin"}]
 }
