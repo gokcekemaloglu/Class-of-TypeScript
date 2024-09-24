@@ -164,17 +164,17 @@ console.log("Cohort DE09");
 
 //* functionoverloading
 
-function add(a:string, b:string):string
-function add(a:number, b:number):number
-function add(a:string, b:number):string
-function add(a:any, b:any){ //* overloading için en son asıl fonk.u yazarken parametrelere any vermemiz gerekiyor. paramertrelere any versek de çalışırken overloading olan fonksiyonlardaki parametrelerin typ'ına göre kabul ediyor
-    return a + b
-}
+// function add(a:string, b:string):string
+// function add(a:number, b:number):number
+// function add(a:string, b:number):string
+// function add(a:any, b:any){ //* overloading için en son asıl fonk.u yazarken parametrelere any vermemiz gerekiyor. paramertrelere any versek de çalışırken overloading olan fonksiyonlardaki parametrelerin typ'ına göre kabul ediyor
+//     return a + b
+// }
 
-console.log(add(3,5));
-console.log(add("3","5"));
-console.log(add("3",5));
-console.log(add(3,"5")); // error
+// console.log(add(3,5));
+// console.log(add("3","5"));
+// console.log(add("3",5));
+// console.log(add(3,"5")); // error
 
 
  
