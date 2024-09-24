@@ -26,12 +26,13 @@ const updateList = () => {
         const li = document.createElement("li")
         li.textContent = item.task
         li.classList.add(item.status === Status.Completed ? "completed" : "active")
+        li.addEventListener("click", () => toggleTodo(index))
         list.appendChild(li)
     })
 }
 
 addBtn.addEventListener("click",()=>{
-    const newTask = input.value.trim()
+    const newTask = input.value.trim() // trim: boşlukları sil demekti. "asdf" - "   sdafsd   "
     if (newTask) {
         tasks.push({task:newTask, status: Status.Active})
         console.log(tasks);
@@ -39,4 +40,9 @@ addBtn.addEventListener("click",()=>{
         input.value = ""        
     }
 })
+
+const toggleTodo = (index:number) => {
+    tasks[index].status = tasks[index].status === Status.Active ? Status.Completed : Status.Active
+    updateList()
+}
 
