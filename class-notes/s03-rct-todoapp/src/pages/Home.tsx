@@ -2,7 +2,8 @@ import { Container } from '@mui/material'
 import Header from '../components/Header'
 import AddTodoComp from '../components/AddTodoComp'
 import TodoList from '../components/TodoList'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import axios from "axios"
 
 const url = "https://634ac3fc5df952851418480f.mockapi.io/api/todos"
 
@@ -16,7 +17,20 @@ const Home = () => {
     // const [todos, setTodos] = useState([] as ITodoType[])
     // const [todos, setTodos] = useState<Array<ITodoType>>([])
     const [todos, setTodos] = useState<ITodoType[]>([]) // yaygın olan kullanım
-    
+
+    const getTodos = async () => {
+        try {
+            const {data} = await axios<ITodoType[]>(url)
+            console.log(data);
+            setTodos(data)
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(()=>{
+        getTodos()
+    },[])
 
   return (
     <Container>
