@@ -12,6 +12,7 @@ import { useState } from "react";
 //   // const [text, setText] = useState<string>("")
 //   const [text, setText] = useState(""); // initial değerden dolayı string olarak alıyor. pirimitive'lerde type tanımlamasını kendisi yapıyor (string, number, boolean gibi.. Yani 0, false, "" gibi...)
 //   // TypeScript, string, boolean ve number gibi ilkel (primitive) değerlerin türlerini otomatik olarak algılar. Ancak, dizi (array) ve obje (object) gibi ilkel olmayan (non-primitive) yapılar, boş olduklarında her türlü değeri kabul edebilirler. Bu nedenle, bu tür veri yapıları için tür belirtmek önemlidir.
+//! her zaman type belirtmemize gerek yok. Typescript type inference özelliği sayesinde inital değerine göre otomatik type ataması yapıyor.
 
 //   const handleClick = () => {
 //     addTodo(text);
@@ -43,9 +44,9 @@ import { useState } from "react";
 //! 2. Kullanım yolu props type (daha çok tercih edilir. Birden fazla props gönderileceği için ayrıca yazmak daha uygun)
 
 interface IAddTodoComp {
-    addTodo: (text: string) => Promise<void>;
-
-
+    // addTodo: (text: string) => Promise<void>;
+    addTodo: AddFn;
+// başka propslarda buraya eklenebilir
 }
 
 const AddTodoComp = ({addTodo}: IAddTodoComp) => {
