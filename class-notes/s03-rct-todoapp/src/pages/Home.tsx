@@ -45,7 +45,7 @@ const Home = () => {
   return (
     <Container>
         <Header/>
-        <AddTodoComp/>
+        <AddTodoComp addTodo={addTodo}/>
         <TodoList/>
     </Container>
   )
