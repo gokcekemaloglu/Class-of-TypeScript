@@ -60,12 +60,18 @@ const AddTodoComp = ({addTodo}: IAddTodoComp) => {
     };
   
     return (
-      <Box>
+      <Box sx={{
+        display: { xs: "block", sm: "flex" },
+        justifyContent: { xs: "flex-start", sm: "center" },
+        m: { xs: 1, sm: "auto" },
+        height: { xs: "120px", sm: "80px" },
+      }}>
         <TextField
           id="outlined-disabled"
           label="New Todo"
           variant="outlined"
           value={text}
+          sx={{ minWidth: { xs: "100%", sm: "50%" }, height: "50px", m: 1 }}
           onChange={(e) => setText(e.target.value)}
         />
         <Button

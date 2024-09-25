@@ -101,7 +101,7 @@ const TodoList: React.FC<ITodoList> = ({ todos, toggleTodo, deleteTodo  }) => {
             />
           ))
         ) : (
-          <Typography>No InCompleted Todo</Typography>
+          <Typography color="error" mt={3}>No InCompleted Todo</Typography>
         )}
       </Grid>
     </Grid>
